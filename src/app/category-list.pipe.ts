@@ -1,7 +1,7 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from "@angular/core";
 
 @Pipe({
-  name: 'categoryList'
+  name: "categoryList"
 })
 export class CategoryListPipe implements PipeTransform {
   transform(mediaItems) {
@@ -11,6 +11,6 @@ export class CategoryListPipe implements PipeTransform {
         categories.push(mediaItem.category);
       }
     });
-    return categories.join(', ');
+    return categories;
   }
 }
